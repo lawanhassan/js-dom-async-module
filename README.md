@@ -37,11 +37,11 @@ The To-Do List app was developed as a capstone exercise to demonstrate mastery o
 ---
 
 ## 📂 Project Structure  
- ![alt text](image-1.png)
+ ![alt text](assets/project-structure.png)
 
 ## 📸 Preview  
 
-![alt text](image.png)(assets/todo-screenshot.png) 
+![alt text](assets/app-image.png)
 
 ---
 
