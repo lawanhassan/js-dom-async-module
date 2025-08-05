@@ -1,0 +1,133 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #f4f4f9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.container {
+  text-align: center;
+  background: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  width: 90%;
+  max-width: 400px;
+}
+
+h1 {
+  color: #333;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column; 
+  align-items: center;    
+  justify-content: center;
+  font-size: 1.8rem;
+}
+
+.todo-icon { 
+  width: 80px;   
+  height: auto;
+  margin-bottom: 10px;
+  max-width: 25%;
+  display: block;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  .todo-icon {
+    width: 60px;
+  }
+  h1 {
+    font-size: 1.4rem;
+  }
+}
+
+.input-area {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+  gap: 10px;
+}
+
+.input-area input {
+  padding: 10px;
+  width: 70%;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 16px;
+}
+
+.input-area button {
+  padding: 10px 16px;
+  background: #007bff;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.input-area button:hover {
+  background: #0056b3;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+ul li {
+  background: #eee;
+  margin: 10px 0;
+  padding: 12px 15px;
+  border-radius: 8px;
+  font-size: 18px;
+  color: gray;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background 0.3s, color 0.3s;
+}
+
+ul li span {
+  cursor: pointer;
+  flex-grow: 1;
+  text-align: left;
+}
+
+ul li.completed span {
+  color: white;
+}
+
+ul li.completed {
+  background: rgb(12, 155, 12);
+}
+
+.tick {
+  visibility: hidden;
+  font-size: 20px;
+  margin-left: 10rem;
+}
+
+ul li.completed .tick {
+  visibility: visible;
+}
+
+.delete-btn {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  margin-left: 10px;
+  transition: transform 0.2s;
+  color: rgb(211, 5, 22);
+  opacity: 10;  
+}
+
+.delete-btn:hover {
+  transform: scale(1.2);
+}
