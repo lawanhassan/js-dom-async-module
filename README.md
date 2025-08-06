@@ -1,82 +1,108 @@
-# 📝 Interactive To-Do List  
-[![Made with HTML](https://img.shields.io/badge/HTML-5-orange?logo=html5&logoColor=white)](#)
-[![Made with CSS](https://img.shields.io/badge/CSS-3-blue?logo=css3&logoColor=white)](#)
-[![Made with JavaScript](https://img.shields.io/badge/JavaScript-ES6-yellow?logo=javascript&logoColor=black)](#)
-[![Status](https://img.shields.io/badge/Status-Active-brightgreen)](#)
+# 📝 Callback Function Assignment  
 
-An elegant and responsive **Interactive To-Do List App** built with **HTML, CSS, and JavaScript**.  
-This project was developed as part of the **Advance Cohort – EHA Academy**, demonstrating DOM manipulation, event handling, responsive design, and local storage persistence.  
+[![JavaScript](https://img.shields.io/badge/JavaScript-ES6-yellow?logo=javascript&logoColor=black)](#)
+[![Status](https://img.shields.io/badge/Status-Completed-brightgreen)](#)
 
-🔗 **[Live Demo](http://127.0.0.1:5500/tasks/todo-interactive/index.html)**  
+This project demonstrates the use of **callbacks in JavaScript** with asynchronous behavior simulated using `setTimeout`.  
+It also includes **error handling** with `try/catch` to handle simulated fetch failures.  
 
 ---
 
-## 📚 Module Overview  
+## 📖 Overview  
 
-This module focused on combining **technical skills** with **soft skills** to deliver real-world projects.  
-The To-Do List app was developed as a capstone exercise to demonstrate mastery of:  
-
-- 📌 **Front-End Development** (HTML, CSS, JS)  
-- 📌 **Responsive Design** for mobile and desktop  
-- 📌 **DOM Manipulation** and **Event Handling**  
-- 📌 **Persistent Data** storage with `localStorage`  
-- 📌 **Version Control** with Git & GitHub  
-- 📌 **Soft Skills**: problem-solving, clean design, documentation  
+The goal of this assignment is to practice:
+- Using **callback functions** in JavaScript  
+- Handling **asynchronous code** with `setTimeout`  
+- Implementing **error handling** for simulated failures  
+- Providing a simple, real-world-style demonstration  
 
 ---
 
 ## 🚀 Features  
 
-✔️ Add new tasks dynamically  
-✔️ Mark tasks as **complete/incomplete** with a checkmark  
-✔️ Delete tasks individually  
-✔️ Save tasks with **localStorage persistence**  
-✔️ Custom icon placed above the title for a professional look  
-✔️ Responsive & mobile-friendly  
+✔️ Simulates an async operation with a 2-second delay  
+✔️ Returns `"Data fetched"` on success  
+✔️ Randomly simulates an error and logs `"Error: Fetch failed"`  
+✔️ Includes an **example usage** to demonstrate functionality  
 
 ---
 
 ## 📂 Project Structure  
- ![alt text](assets/project-structure.png)
+![alt text](assets/callback-image.png)
 
-## 📸 Preview  
-
-![alt text](assets/app-image.png)
 
 ---
 
-## 🛠️ Technologies Used  
+## 📄 Code Implementation  
 
-- **HTML5**  
-- **CSS3** (Flexbox & Media Queries)  
-- **JavaScript (ES6)**  
-- **Git & GitHub**  
+```javascript
+function fetchDataWithCallback(callback) {
+  setTimeout(function() {
+    try {
+      // Simulate error randomly (50% chance)
+      let error = Math.random() > 0.5; 
+
+      if (error) {
+        throw new Error("Fetch failed");
+      }
+
+      // On success
+      callback("Data fetched");
+    } catch (err) {
+      console.error("Error:", err.message);
+    }
+  }, 2000);
+}
+
+// Example usage
+fetchDataWithCallback(function(result) {
+  console.log(result);
+});  
+
+```
+---
+## 🧪 How to Test
+Clone the project and open the .js file in a browser console or Node.js environment.
+
+Run the function:
+
+``` javascript
+fetchDataWithCallback(function(result) {
+  console.log(result);
+}); 
+
+```
 
 ---
+Observe behavior:
 
-## ⚡ Getting Started  
+✅ Success → "Data fetched"
 
-1. Clone this repository  
-   ```bash
-   git clone https://github.com/yourusername/todo-list-app.git
+❌ Failure → "Error: Fetch failed"
+---
+##  🌍 Real-World Applications
+✔️ Fetching API Data
+- Handle responses from a server request and process data once it's ready.
 
+✔️ File Operations (Node.js)
+- Read or write files asynchronously, with callbacks for success/error handling.
+   
+✔️ User Authentication
+- Validate login credentials with a database, responding differently for success vs. failure.
 
 ## 💡 Future Enhancements
-✔️ 🗑 Add a Clear All button
+✔️ 🔄 Convert implementation to Promises
 
-✔️🔔 Implement task reminders with notifications
+✔️ 🌙 Add an Async/Await version for modern syntax
 
-✔️🌙 Add Dark Mode
+✔️ 📊 Implement a retry mechanism for failures
 
-✔️📊 Support task categories (Work, Personal, Study, etc.)
-
-## 👤 Author
+##  👤 Author
 - Lawan Hassan Adamu
 - Advance Cohort — EHA Academy
 
-- 📧 lawanhassan.ant@gmail.com 
+- 📧 lawanhassan.ant@gmail.com
 - 🔗 https://www.linkedin.com/in/lawanadamu/
 - 🔗 https://github.com/lawanhassan
 
-💖 If you like this project, consider giving it a ⭐ on GitHub!
-
+💖 If you found this helpful, consider giving it a ⭐ on GitHub!
