@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interactive To Do List</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>
+  <img src="../../assets/todo-icon.png" 
+       alt="3D clipboard with checklist and pencil" 
+       class="todo-icon">
+  <span>Interactive To Do List</span>
+  </h1>
+    
+    <div class="input-area">
+      <input type="text" id="taskInput" placeholder="Enter a new task...">
+      <button onclick="addTask()">Add</button>
+    </div>
+
+    <ul id="todo-list">
+      <li>
+        <span onclick="toggleTask(this)">Learn Git</span>
+        <span class="tick">✔</span>
+        <button class="delete-btn" onclick="deleteTask(this)">🗑</button>
+      </li>
+      <li>
+        <span onclick="toggleTask(this)">Practice JavaScript</span>
+        <span class="tick">✔</span>
+        <button class="delete-btn" onclick="deleteTask(this)">🗑</button>
+      </li>
+    </ul>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
